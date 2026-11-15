@@ -1,0 +1,94 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #f5efe4;
+    color: #293a32;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.collection-page {
+    width: min(calc(100% - 32px), 1120px);
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.collection-intro {
+    margin-bottom: 28px;
+    padding-bottom: 20px;
+    border-bottom: 3px solid #a5543b;
+}
+
+h1,
+h2 {
+    color: #1e4738;
+    font-family: Georgia, serif;
+    line-height: 1.15;
+}
+
+h1 {
+    margin: 0 0 12px;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+.collection-intro p {
+    max-width: 65ch;
+    margin: 0;
+}
+
+.collection-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.collection-card {
+    flex: 0 1 100%;
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid #d7cbbb;
+    border-radius: 20px;
+    background-color: #fffdf8;
+}
+
+.collection-card img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 18px;
+}
+
+.card-content h2 {
+    margin: 0 0 8px;
+    font-size: 1.4rem;
+}
+
+.card-content p {
+    margin: 0;
+}
+
+.card-content .card-detail {
+    margin-bottom: 10px;
+    color: #8a422e;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+@media (width >= 480px) {
+    .collection-card {
+        flex-basis: calc((100% - 16px) / 2);
+    }
+}
+
+@media (width >= 1024px) {
+    .collection-card {
+        flex-basis: calc((100% - 32px) / 3);
+    }
+}
